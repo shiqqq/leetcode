@@ -15,10 +15,7 @@ var combinationSum = function(candidates, target) {
     let res = [];
     dfs(target, [], 0);
     function dfs(target, path, idx){
-
         console.log('进入dfs咯..', 'path:',path, '当前的index：', idx, '当前对应值：', candidates[idx] )
-    
-
         //定义出口
         if(idx == candidates.length ){
             console.log('当前dfs结束啦 退出退出', path);
@@ -29,9 +26,7 @@ var combinationSum = function(candidates, target) {
             res.push([...path]); //找到目标组合了，留下这个
             return;
         }
-       
         //下一行是重点「回溯」 注意分两类： 使用当前index 和 跳过当前index 
-
         //1.使用当前index 此时path里面已有的组合数还小于目标值
         if((target - candidates[idx]) >= 0){
             console.log(target,candidates[idx], path, '可以加入path',);

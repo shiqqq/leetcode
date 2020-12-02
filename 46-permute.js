@@ -7,7 +7,6 @@ var threeSum = function (nums) {
     console.log(nums);
     let res = [];
 
-
     //先对这个数组进行排序    如何排序啊？？  这里直接使用数组的sort方法
     nums.sort(function (a, b) {
         return a - b;
@@ -37,11 +36,7 @@ var threeSum = function (nums) {
                 break;
             }
         }
-
     }
-
-
-
     return (res);
 
 };
